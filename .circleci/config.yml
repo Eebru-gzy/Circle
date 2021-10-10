@@ -6,7 +6,6 @@ version: 2.1
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 orbs:
   welcome: circleci/welcome-orb@0.4.1
-  node: circleci/node@4.7.0
 jobs:
   print_hello:
     docker:
@@ -37,7 +36,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - node/run
       - welcome/run
       - print_hello
       - print_world:
